@@ -100,9 +100,9 @@ public class GameController {
 	}
 
 	/**
-	 * Method ensures dungeon songs aren't playing. Begins playing main menu
-	 * song. Sets the text relative for games beggining. Sets the player stats
-	 * to represent default values.
+	 * Method ensures dungeon songs aren't playing. Begins playing main menu song.
+	 * Sets the text relative for games beggining. Sets the player stats to
+	 * represent default values.
 	 *
 	 * @throws IOException
 	 * @throws UnsupportedAudioFileException
@@ -127,7 +127,7 @@ public class GameController {
 		// player.setName("");
 
 		gui.jta.setText(
-				"THE FALLEN - A FANTASY TEXT BASED ROLEPLAYING GAME BY - MICHAEL LEE - BETA VERSION 1.2 UPDATE 2 \n\n- START NEW GAME - \nTo start a new game press (y) then (enter)"
+				"THE FALLEN - CREATED BY MICHAEL LEE - VERSION 1.0 \n\n- START NEW GAME - \nTo start a new game press (y) then (enter)"
 						+ "\n\n- CONTINUE / LOAD SAVE GAME - \nIf you have loaded/or to continue a save game press (r) then (enter) \n\nSHOW FALLEN \nPress (s) to show The Fallen");
 		gui.jta.append(loadError);
 
@@ -180,14 +180,14 @@ public class GameController {
 
 	/**
 	 * Method ensures damage modifiers are stored to control bolster form(spell)
-	 * Sets the text throughout the GUI respectively Checks while the array list
-	 * of enemies is not empty and the current enemy is alive. Also checks the
-	 * player is alive. Sets the enemies stats relative to the players
-	 * specifically per dungeon. Sets the image of the enemy to the relevant
-	 * image. Updates the GUI with battle text Waits for user input for battle
-	 * decisions Controls user input and compares enemy and player variables to
-	 * determine outputs. Upon room complete (array list of enemies empty)
-	 * return to town hall upon SPACEBAR press.
+	 * Sets the text throughout the GUI respectively Checks while the array list of
+	 * enemies is not empty and the current enemy is alive. Also checks the player
+	 * is alive. Sets the enemies stats relative to the players specifically per
+	 * dungeon. Sets the image of the enemy to the relevant image. Updates the GUI
+	 * with battle text Waits for user input for battle decisions Controls user
+	 * input and compares enemy and player variables to determine outputs. Upon room
+	 * complete (array list of enemies empty) return to town hall upon SPACEBAR
+	 * press.
 	 *
 	 * GENERIC THROW EXCEPTIONS
 	 *
@@ -529,9 +529,9 @@ public class GameController {
 	}
 
 	/**
-	 * Method appends the GUI with relevant text that asks user to select a
-	 * RACE. Sets the variables of the player based on floating point scaling
-	 * (Race math calculations).
+	 * Method appends the GUI with relevant text that asks user to select a RACE.
+	 * Sets the variables of the player based on floating point scaling (Race math
+	 * calculations).
 	 */
 	private void selectRace() {
 		gui.jta.setText("Welcome to the world of Endal" + "\n" + "\nSelect your race:\n"
@@ -576,8 +576,8 @@ public class GameController {
 	}
 
 	/**
-	 * Method sets text on GUI, Sanitises user input to remove spaces, prints
-	 * error if wrong input, else stores string into player mode name
+	 * Method sets text on GUI, Sanitises user input to remove spaces, prints error
+	 * if wrong input, else stores string into player mode name
 	 */
 	private void nameCharacter() {
 		gui.jta.setText("\nPlease Enter your name to continue...\n");
@@ -594,9 +594,9 @@ public class GameController {
 	}
 
 	/**
-	 * Method begins the town hall, stopping the unnecessary music files.
-	 * Appends the GUI to relevant information or town hall. Waits for text to
-	 * be entered from user to navigate the game.
+	 * Method begins the town hall, stopping the unnecessary music files. Appends
+	 * the GUI to relevant information or town hall. Waits for text to be entered
+	 * from user to navigate the game.
 	 *
 	 *
 	 * @throws UnsupportedAudioFileException
@@ -809,11 +809,11 @@ public class GameController {
 	}
 
 	/**
-	 * Method used to calculate the end of a fight between player and enemy
-	 * Updates player experience and generates random amounts of coins for
-	 * player. Adds between 1 and 2 health and mana potions to players
-	 * inventory. Checks what level the player is to stop levelling in low level
-	 * areas. If the player has levelled, update the model stats accordingly.
+	 * Method used to calculate the end of a fight between player and enemy Updates
+	 * player experience and generates random amounts of coins for player. Adds
+	 * between 1 and 2 health and mana potions to players inventory. Checks what
+	 * level the player is to stop levelling in low level areas. If the player has
+	 * levelled, update the model stats accordingly.
 	 */
 	private void experienceGain() {
 		// Remove [0] From ArrayList of NPCs
@@ -978,8 +978,8 @@ public class GameController {
 	}
 
 	/**
-	 * Instantiate a new story intro from the model. Allows for story messages
-	 * to be passed into the GUI on command.
+	 * Instantiate a new story intro from the model. Allows for story messages to be
+	 * passed into the GUI on command.
 	 */
 	public void storyIntro() {
 		Story story = new Story();
@@ -991,8 +991,8 @@ public class GameController {
 	}
 
 	/**
-	 * Instantiate a new story message from the model. Allows for story messages
-	 * to be passed into the gui on command.
+	 * Instantiate a new story message from the model. Allows for story messages to
+	 * be passed into the gui on command.
 	 */
 	public void storyMessage() {
 		Story story = new Story();
@@ -1037,8 +1037,8 @@ public class GameController {
 	}
 
 	/**
-	 * Method checks if the player has no mana potions and throws error. Else
-	 * the method allocates 2 more charges to each spell.
+	 * Method checks if the player has no mana potions and throws error. Else the
+	 * method allocates 2 more charges to each spell.
 	 */
 	private void manaPotion() {
 		if (player.getNumManaPotions() <= 0) {
@@ -1086,8 +1086,8 @@ public class GameController {
 	}
 
 	/**
-	 * Method is used to append the GUI with the list of fallen characters using
-	 * a for reach loop.
+	 * Method is used to append the GUI with the list of fallen characters using a
+	 * for reach loop.
 	 */
 	public void getFallen() {
 		gui.jta.append("\n\n- THE FALLEN -");
@@ -1124,8 +1124,8 @@ public class GameController {
 	}
 
 	/**
-	 * Method waits for keyboard press ENTER, only active if the textField is
-	 * not empty.
+	 * Method waits for keyboard press ENTER, only active if the textField is not
+	 * empty.
 	 */
 	public void waitEnter() {
 
@@ -1149,9 +1149,9 @@ public class GameController {
 	}
 
 	/**
-	 * Save method that generates a .DAT file and saves the relevant data from
-	 * the model. Uses input and output streams to do so. JFileChooser
-	 * (selection window for gui)
+	 * Save method that generates a .DAT file and saves the relevant data from the
+	 * model. Uses input and output streams to do so. JFileChooser (selection window
+	 * for gui)
 	 */
 	public void save() {
 		JFileChooser dialog = new JFileChooser();
@@ -1217,8 +1217,8 @@ public class GameController {
 
 	// Save, Load Methods
 	/**
-	 * Load method for the game, loads from .DAT file specified. Reads the
-	 * objects from the file into the model, theoretically continuing the game.
+	 * Load method for the game, loads from .DAT file specified. Reads the objects
+	 * from the file into the model, theoretically continuing the game.
 	 *
 	 * @throws IOException
 	 * @throws ClassNotFoundException
